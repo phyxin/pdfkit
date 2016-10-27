@@ -65,7 +65,7 @@ class PDFKit
     result = IO.popen(invoke, "wb+") do |pdf|
       pdf.puts(@source.to_s) if @source.html?
       pdf.close_write
-      pdf.gets(nil) if path.nil?
+      pdf.gets(nil)# if path.nil?
     end
 
     # $? is thread safe per
